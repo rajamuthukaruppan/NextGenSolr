@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Products | Smart Solar Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">NextGen Energy Systems</div>
+    <nav>
+      <a th:href="@{/}">Home</a>
+      <a th:href="@{/products}">Products</a>
+      <a th:href="@{/contact}">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Designed for Indian Homes</h2>
+    <p class="section-desc">
+      Our solar solutions work seamlessly with existing inverters, batteries,
+      and rooftops — no unnecessary replacement, no complexity.
+    </p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>Works with Existing Inverter</h3>
+        <p>
+          No need to discard your current inverter.
+          Our products intelligently integrate with your setup.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>Patented BCI Technology</h3>
+        <p>
+          Battery Charging Inhibition ensures solar is prioritized
+          and prevents unnecessary grid charging.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>Reduced Electricity Bills</h3>
+        <p>
+          Maximize solar utilization and significantly reduce monthly EB bills.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Our Products</h2>
+    <p class="section-desc">
+      Intelligent solar hardware that maximizes savings and improves backup power.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <h3>iCON – Solar Converter</h3>
+        <p>
+          Convert your existing inverter into a smart solar inverter.
+          Ideal for homes already using battery backup.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>iCUBE – Smart Solar Inverter</h3>
+        <p>
+          An advanced solar inverter with intelligent charging logic
+          to prioritize solar energy and reduce grid usage.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>iSTORE – Energy Storage</h3>
+        <p>
+          Store excess solar energy and use it during night-time
+          or power outages for uninterrupted comfort.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>On-Grid Solar System</h3>
+        <p>
+          Grid-connected rooftop solar solutions that reduce
+          electricity bills by exporting excess power.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 SolarPower Solutions
+</footer>
+
+<a class="whatsapp-btn" href="https://wa.me/919000000000" aria-label="WhatsApp">💬</a>
+<a class="call-btn" href="tel:+919000000000" aria-label="Call">📞</a>
+
+</body>
+</html>

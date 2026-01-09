@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>NextGen Energy Systems</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">NextGen Energy Systems</div>
+    <nav>
+      <a th:href="@{/}">Home</a>
+      <a th:href="@{/products}">Products</a>
+      <a th:href="@{/contact}">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero image-hero"
+  th:style="|background:
+    url('@{/images/AI.png}') center / cover no-repeat;|">
+
+  <div class="container hero-grid">
+      <div class="hero-actions">
+        <a href="#products" class="btn btn-primary">Explore Products</a>
+        <a th:href="@{/contact}" class="btn btn-secondary">Get Quote</a>
+      </div>
+   
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <h2 class="section-title">Our Solutions</h2>
+    <p class="section-desc">
+      Designed to work with your existing inverter, battery and rooftop.
+    </p>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>iCON – Solar Converter</h3>
+        <p>Convert any inverter into a smart solar system.</p>
+      </div>
+      <div class="product-card">
+        <h3>iCUBE – Smart Inverter</h3>
+        <p>Advanced solar inverter with intelligent charging.</p>
+      </div>
+      <div class="product-card">
+        <h3>iSTORE – Energy Storage</h3>
+        <p>Store solar power for night and backup.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <h2 class="section-title">Trusted by homeowners</h2>
+
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p>“My electricity bill reduced within two months.”</p>
+        <span>Stanly Sam Prakash, Chennai</span>
+      </div>
+      <div class="testimonial">
+        <p>“Works perfectly with my existing inverter.”</p>
+        <span>Arul J, Coimbatore</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 SolarPower Solutions
+</footer>
+
+<a class="whatsapp-btn" href="https://wa.me/919000000000">💬</a>
+<a class="call-btn" href="tel:+919000000000">📞</a>
+
+</body>
+</html>

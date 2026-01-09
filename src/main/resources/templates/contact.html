@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Smart Solar Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+	    const alertBox = document.querySelector(".alert-success");
+
+	    if (alertBox) {
+	      setTimeout(() => {
+	        alertBox.classList.add("hide");
+	        setTimeout(() => alertBox.remove(), 600);
+	      }, 5000);
+	    }
+	  });
+	</script>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+    <div class="logo">NextGen Energy Systems</div>
+    <nav>
+      <a th:href="@{/}">Home</a>
+      <a th:href="@{/products}">Products</a>
+      <a th:href="@{/contact}">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section  >
+  <div class="container">
+    <h2 class="section-title">Talk to Our Solar Experts</h2>
+    <p class="section-desc">
+      Get a free consultation to understand how solar can reduce
+      your electricity bill and improve power backup.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <h3>Free Consultation</h3>
+        <p>
+          Share your details and our team will guide you
+          through the best solar solution.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>Site & Usage Analysis</h3>
+        <p>
+          We analyze your rooftop space, EB usage,
+          and inverter capacity before recommending a solution.
+        </p>
+      </div>
+
+      <div class="product-card">
+        <h3>Transparent Pricing</h3>
+        <p>
+          No hidden costs. Clear pricing and ROI explanation
+          before installation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section id="contact-form">
+  <div class="container">
+  	  <div class="form-wrapper">
+	    	<div th:if="${successMessage}"
+	     class="alert-success"
+	     role="alert"
+	     th:text="${successMessage}">
+	</div>
+    <h2 class="section-title">Request a Call Back</h2>
+    <p class="section-desc">
+      Share your details and our team will contact you shortly.
+    </p>
+
+   
+      <form th:action="@{/send-enquiry}" method="post">
+
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" type="tel" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button class="btn btn-primary" type="submit">
+          Submit Enquiry
+        </button>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<footer>
+  © 2026 SolarPower Solutions
+</footer>
+
+<a class="whatsapp-btn" href="https://wa.me/919000000000" aria-label="WhatsApp">💬</a>
+<a class="call-btn" href="tel:+919000000000" aria-label="Call">📞</a>
+
+</body>
+</html>

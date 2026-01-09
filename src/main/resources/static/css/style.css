@@ -1,0 +1,346 @@
+/* ===============================
+   COLOR SYSTEM
+================================ */
+:root {
+  --green: #0f766e;
+  --green-light: #2dd4bf;
+  --blue: #2563eb;
+  --yellow: #facc15;
+
+  --bg-main: #f0fdf9;
+  --bg-soft: #ecfeff;
+  --card: #ffffff;
+
+  --text-main: #0f172a;
+  --text-muted: #475569;
+
+  --shadow: 0 20px 45px rgba(0,0,0,.12);
+}
+
+/* ===============================
+   BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: linear-gradient(180deg, #f0fdf9, #ecfeff);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+
+
+section {
+  padding: 100px 0;
+}
+
+/* ===============================
+   HEADER
+================================ */
+header {
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  color: white;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 78px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+nav a {
+  color: white;
+  margin-left: 26px;
+  font-weight: 600;
+  text-decoration: none;
+  opacity: .9;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* ===== IMAGE HERO – HIGH CONTRAST & CLEAR ===== */
+
+.image-hero .hero-grid {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+
+/* ===============================
+   HERO
+================================ */
+/* ===== HERO BASE ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;   /* prevents overlap */
+}
+
+/* ===== IMAGE HERO ===== */
+.image-hero {
+  position: relative;
+  color: white;
+  min-height: 70vh;          /* reserve vertical space */
+  display: flex;
+  align-items: center;
+  padding: 120px 0 140px;   /* TOP & BOTTOM spacing */
+}
+
+/* Overlay */
+.image-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(15, 118, 110, 0.30),
+    rgba(37, 99, 235, 0.30)
+  );
+  z-index: 1;
+}
+
+/* Content layer */
+.image-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Text */
+.image-hero h1 {
+  font-size: 52px;
+  max-width: 760px;
+  line-height: 1.15;
+  text-shadow: 0 6px 20px rgba(0,0,0,.35);
+}
+
+.image-hero p {
+  margin-top: 22px;
+  font-size: 18px;
+  max-width: 720px;
+  opacity: 0.95;
+  text-shadow: 0 4px 14px rgba(0,0,0,.35);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--yellow), #fde047);
+  color: #0f172a;
+}
+
+.btn-secondary {
+  margin-left: 16px;
+  border: 2px solid white;
+  color: white;
+}
+
+/* ===============================
+   SECTION HEADINGS
+================================ */
+.section-title {
+  text-align: center;
+  font-size: 38px;
+  background: linear-gradient(90deg, var(--green), var(--blue));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 18px auto 0;
+}
+
+/* ===============================
+   PRODUCT CARDS
+================================ */
+.product-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 34px;
+}
+
+.product-card {
+  background: linear-gradient(180deg, #ffffff, #f0fdf9);
+  border-radius: 22px;
+  padding: 36px;
+  box-shadow: var(--shadow);
+  border-top: 6px solid var(--green-light);
+  transition: transform .3s ease;
+}
+
+.product-card:nth-child(2) { border-top-color: var(--blue); }
+.product-card:nth-child(3) { border-top-color: var(--yellow); }
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card h3 {
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+.product-card p {
+  margin-top: 12px;
+  color: var(--text-muted);
+}
+
+/* ===============================
+   TESTIMONIALS
+================================ */
+.testimonials {
+  background: linear-gradient(135deg, #ecfeff, #f0fdf9);
+}
+
+.testimonial-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.testimonial {
+  background: white;
+  padding: 36px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  border-left: 6px solid var(--green);
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+/* ===============================
+   CONTACT FORM
+================================ */
+.form-wrapper {
+  max-width: 540px;
+  margin: 70px auto 0;
+  background: white;
+  padding: 44px;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+}
+
+label {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input, textarea {
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 22px;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #cbd5e1;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background: linear-gradient(90deg, #020617, #0f172a);
+  color: #cbd5e1;
+  text-align: center;
+  padding: 36px;
+}
+
+/* ===============================
+   FLOATING BUTTONS
+================================ */
+.whatsapp-btn, .call-btn {
+  position: fixed;
+  right: 24px;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.whatsapp-btn {
+  bottom: 92px;
+  background: #22c55e;
+}
+
+.call-btn {
+  bottom: 30px;
+  background: linear-gradient(135deg, var(--yellow), #fde047);
+}
+
+.alert-success {
+  max-width: 520px;
+  margin: 0 auto 24px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(34,197,94,.35);
+}
+.alert-success {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.alert-success.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 38px;
+  }
+}
