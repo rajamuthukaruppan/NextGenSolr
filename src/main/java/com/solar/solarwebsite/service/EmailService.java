@@ -1,13 +1,10 @@
 package com.solar.solarwebsite.service;
 
-import java.io.IOException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.solar.solarwebsite.util.CommonUtil;
 
-import jakarta.mail.MessagingException;
 
 @Service
 public class EmailService {	
@@ -20,7 +17,7 @@ public class EmailService {
             String phone,
             String email,
             String message
-    ) throws MessagingException {
+    ) throws Exception {
 
        // MimeMessage mimeMessage = mailSender.createMimeMessage();
         //MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
